@@ -1,0 +1,4 @@
+<% @list.movies.each do |movie| %>
+  <%= movie.poster_url %>
+  <%= link_to movie.title, movie_path(movie) %>
+<% end %>
