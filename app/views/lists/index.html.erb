@@ -3,6 +3,9 @@
 <% @lists.each do  |list| %>
   <ul>
     <li><%= list.name %></li>
-<%= link_to "More info", list_path(list)%>
+      <%= link_to "More info", list_path(list)%>
+      <%= link_to "Delete this list", lists_path%>
   </ul>
 <% end %>
+
+<%= link_to "New list", new_list_path %>

@@ -1,4 +1,9 @@
-<% @list.movies.each do |movie| %>
-  <%= movie.poster_url %>
-  <%= link_to movie.title, movie_path(movie) %>
+<h1>bookmark</h1>
+
+<% @list.bookmarks.each do |bookmark| %>
+  <%= bookmark.movie.poster_url %>
+  <%= bookmark.movie.title %> </strong> </h5>
+  <%= bookmark.movie.overview %></p>
+  <%= bookmark.movie.rating %></p>
+  <%= bookmark.comment %></p>
 <% end %>
