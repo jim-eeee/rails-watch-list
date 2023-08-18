@@ -2,9 +2,10 @@
 
 <% @lists.each do  |list| %>
   <ul>
-    <li><%= list.name %></li>
+    <li><%= list.name %>
       <%= link_to "More info", list_path(list)%>
-      <%= link_to "Delete this list", lists_path%>
+      < % = link_to "More info", @list.destroy, list_path(list)%>
+    </li>
   </ul>
 <% end %>
 
