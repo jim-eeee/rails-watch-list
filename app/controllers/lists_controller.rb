@@ -20,9 +20,10 @@ class ListsController < ApplicationController
     end
   end
 
-  def delete
-    @list.delete
-    redirect_to lists_path(@list)
+  def destroy
+    @list = List.find(params[:id])
+    @list.destroy
+    redirect_to lists_path, status: :see_other
   end
 
   private
