@@ -1,7 +1,7 @@
-<%= cl_image_tag("yp1pginbamkqzacxodwf",
-  width: 400, height: 300, crop: :fill) %>
-
 <%= simple_form_for @list do |f| %>
   <%= f.input :name %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to "Back to lists", lists_path(@list) %>

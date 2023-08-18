@@ -1,5 +1,7 @@
 <h1><%= @list.name %></h1>
 
+<%= cl_image_tag @list.photo.key %>
+
 <h2>All movies</h2>
 <% @list.movies.each do |movie| %>
   <%= movie.title %>
@@ -15,3 +17,4 @@
 
 <%= link_to "Delete this list", list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure" } %>
 <%= link_to "Add Movie", new_list_bookmark_path(@list) %>
+<%= link_to "Back to lists", lists_path(@list) %>
